@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infelearn Chatbot</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+
+</head>
+<body>
+
+<button class="chat_icon" onclick="openForm()"><img src="chat_icon.svg" alt=""></button>
+<div class="chat_box">
+	<div class="infeb">
+		<img src="infebot.jpeg" class="infebotimg"alt="">
+	</div>
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+			<select data-conv-question="<strong> Hi! I am Infebot, How can I help you </strong>" name="category">
+			 <option value="About Courses">About  Courses ?</option>
+			  <option value="About Company">About the Company ?</option>
+			</select>
+	  
+			<input type="text" name="name" data-conv-question="Please, Enter your name">
+			<input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you." data-no-answer="true">
+	  
+			<div data-conv-fork="category">
+			  <div data-conv-case="About Courses">
+				  <select data-conv-question="Select a course of your interest" name="preferance">
+							  <option value="Java">Java</option>
+							  <option value="Python">Python</option>
+							  <option value="C language">C language</option>
+							  <option value="C">others</option>
+							  </select>
+							  <div data-conv-fork="preferance">
+								  <div data-conv-case="Java">
+			   <input type="text" name="courseName" data-conv-question="Java is a general-purpose, class-based, object-oriented programming language designed for having lesser implementation dependencies. It is a computing platform for application development. Java is fast, secure, and reliable, therefore. It is widely used for developing Java applications in laptops, data centers, game consoles, scientific supercomputers, cell phones, etc. Go through our Website: <a href='https://infelearn.com'target='_blank'>Infelearn.com</a>. After visiting the website please acknowledge with:<strong> Yes </strong> ">
+	  
+	   
+		   <select data-conv-question="Was it Helpful. Please acknowledge with selecting:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Thanks for your interest. Please acknowledge with:<strong> Yes </strong>">
+		 <input data-conv-question="Please provide your e-mail for furthur details" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+		  <select data-conv-question="Please Confirm">
+			  <option value="Yes">Confirm</option>
+			</select>
+			 <input type="text" name="courseName" data-conv-question="Thanks for providing your details. We'll contact you soon.
+			 Please acknowledge with:<strong> Yes </strong>">
+			 <select data-conv-question="Please, spare a few minutes to fill out this feedback form. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for using the Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for using the Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			 <input type="text" data-conv-question="Thanks, for using the Infebot.
+			 Have a nice day, Bye">
+			  </div>
+				  
+	  
+				  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Its ok, If you have any queries just acknowledge with:<strong> Yes </strong>">
+		 <input data-conv-question="Please provide your e-mail I'd for getting furthur details" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+			<select data-conv-question="Please Confirm">
+			  <option value="Yes">Confirm</option>
+			</select>
+			 <input type="text" name="courseName" data-conv-question="Thanks for providing your details. Our agent will contact you soon.
+			 If its fine acknowledge with:<strong> Yes </strong>">
+			 <input type="text" data-conv-question="Due to technical error if our agent couldn't connect with you, please fill free to e-mail us on: info@infelearn.com. Please acknowledge with:<strong> Yes </strong>">
+			 <select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			
+			  </div>
+		  </div>
+	  </div>
+	   
+							   
+			   <div data-conv-case="Python">
+	  <input type="text" name="courseName" data-conv-question="Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages. Go through our Website: <a href='https://infelearn.com'target='_blank'>Infelearn.com</a>. After visiting the website please acknowledge with:<strong> Yes </strong>">
+	  <select data-conv-question="Was it Helpful. Please acknowledge with selecting:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Thanks for your interest. Please acknowledge with:<strong> Yes </strong>.">
+		 <input data-conv-question="Please provide your e-mail I'd for getting furthur details" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+		  <select data-conv-question="Please Confirm">
+			  <option value="Yes">Confirm</option>
+			</select>
+			 <input type="text" name="courseName" data-conv-question="Thanks for providing your details. Our agent will contact you soon for furthur process.
+			 If its fine acknowledge with:<strong> Yes </strong>">
+			 <select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			  </div>
+				  
+	  
+				  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Its ok, If you have any queries just acknowledge with:<strong> Yes </strong>">
+		 <input data-conv-question="Please provide your e-mail I'd for getting furthur details" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+			<select data-conv-question="Please Confirm">
+			  <option value="Yes">Confirm</option>
+			</select>
+			 <input type="text" name="courseName" data-conv-question="Thanks for providing your details. Our agent will contact you soon, stating what queries you are having.
+			 If its fine acknowledge with:<strong> Yes </strong>">
+			 <input type="text" data-conv-question="Due to technical error if our agent couldn't connect with you, please fill free to e-mail us on: info@infelearn.com. Please acknowledge with:<strong> Yes </strong>">
+			 <select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			  </div>
+		  </div>
+			  </div>
+	  
+			  <div data-conv-case="C language">
+	  <input type="text" name="courseName" data-conv-question="C is a general-purpose programming language that is extremely popular, simple, and flexible to use. It is a structured programming language that is machine-independent and extensively used to write various applications, Operating Systems like Windows, and many other complex programs like Oracle database, Git, Python interpreter, and more. Go through our Website: <a href='https://infelearn.com'target='_blank'>Infelearn.com</a>. After visiting the website please acknowledge with:<strong> Yes </strong>">
+	  <select data-conv-question="Was it Helpful. Please acknowledge with selecting:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Thanks for your interest. Please acknowledge with:<strong> Yes </strong>.">
+		 <input data-conv-question="Please provide your e-mail I'd for getting furthur details" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+		  <select data-conv-question="Please Confirm">
+			  <option value="Yes">Confirm</option>
+			</select>
+			 <input type="text" name="courseName" data-conv-question="Thanks for providing your details. Our agent will contact you soon for furthur process.
+			 If its fine acknowledge with: <strong> Yes </strong>">
+			<select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href=''target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			  </div>
+				  
+	  
+				  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Its ok, If you have any queries just acknowledge with:<strong> Yes </strong>">
+		 <input data-conv-question="Please provide your e-mail I'd for getting furthur details" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+			<select data-conv-question="Please Confirm">
+			  <option value="Yes">Confirm</option>
+			</select>
+			 <input type="text" name="courseName" data-conv-question="Thanks for providing your details. Our agent will contact you soon, stating what queries you are having.
+			 If its fine acknowledge with:<strong> Yes </strong>">
+			 <input type="text" data-conv-question="Due to technical error if our agent couldn't connect with you, please fill free to e-mail us on: info@infelearn.com. Please acknowledge with:<strong> Yes </strong>">
+			 <select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:</strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:</strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			  </div>
+		  </div>
+	  </div>
+	  </div>
+	  </div>
+	  
+			  <div data-conv-case="About Company" data-conv-fork="first-question2">
+	  
+				<input type="text" name="companyName" data-conv-question="Go to our official website: <a href='https://infelearn.com'target='_blank'>Infelearn.com</a>. After visiting please acknowledge with:<strong> Yes </strong>".>
+				<input type="text" name="companyName" data-conv-question="I hope you have visited and get some idea about our company. Shall we proceed, Please acknowledge with:<strong> Yes </strong>">
+	  <select data-conv-question="If you want to know our Mission and Vision. Kindly acknowledge with selecting: Mission/ Vision" 
+	  name="preferance">
+							  <option value="Mission">Mission</option>
+							  <option value="Vision">Vision</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Mission">
+			   <input type="text" name="courseName" data-conv-question="We all know how the definition of “Education” has been changed over the past few years. Now, education means a lot more than just academic knowledge. In such a scenario, every learner needs expert guidance in order to raise the bar and master their skills in this competitive world.
+	  
+	  Hence, contrary to the rest of all edtech companies, Infelearn has risen with a mission to develop infinite E-learning modules for every learner not only in academics but also in the fields of sports and Holistic Development. Please acknowledge with:<strong> Yes </strong>.">
+	  <input type="text" name="courseName" data-conv-question="I think you have got some idea about our Mission. Please acknowledge with:<strong> Yes </strong>.">
+	  
+	  <select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+	  </div>
+			  
+								  <div data-conv-case="Vision">
+			   <input type="text" name="courseName" data-conv-question="We strongly believe in our core values to make our vision into reality. In fact, our product “INFELEARN” is named based on the first letters of our core values. Please acknowledge with: Yes.">
+			   <input type="text" name="courseName" data-conv-question="I think you have got some idea about our Vision. Please acknowledge with:<strong> Yes </strong>.">
+	  
+	  <select data-conv-question="So shall we conclude with a feedback form which inlighten us. Please acknowledge with:<strong> Yes/ No </strong>" name="preferance">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+		  </select>
+		  <div data-conv-fork="preferance">
+								  <div data-conv-case="Yes">
+			   <input type="text" name="courseName" data-conv-question="Great! Kindly fill the Feedback form by clicking the link:<a href='https://forms.gle/67PCzPto8GymVuio7'target='_blank'> Feedback Form</a>. After filling, Please acknowledge with:<strong> Yes </strong>.">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye ">
+			  </div>
+			  <div data-conv-case="No">
+			   <input type="text" name="courseName" data-conv-question="Thanks, for joining with Infebot Have a nice day, Bye.">
+			  </div>
+		  </div>
+			  </div>
+		  </div>
+	  
+	  </div>        
+	  </div>    
+	  </form>
+</div>
+	<button type="button" class="close" onclick="closeForm()">
+		X
+	</button>
+</div>
+
+<script type="text/javascript">
+	document .querySelector(".chat_icon") .addEventListener("click", openForm);
+	document.querySelector(".close").addEventListener("click", closeForm);
+	function openForm() {
+	document.querySelector(".chat_box").style.display = "block";
+	document.querySelector(".chat_icon").style.display = "none";
+	$(document).ready(function() {
+
+
+	$('.my-conv-form-wrapper').convform({selectInputStyle: 'disable'})
+});
+	}
+	function closeForm() {
+	document.querySelector(".chat_box").style.display = "none";
+	document.querySelector(".chat_icon").style.display = "block";
+	}
+</script>
+
+</body>
+</html>
